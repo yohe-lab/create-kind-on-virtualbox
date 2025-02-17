@@ -6,7 +6,7 @@
 - ローカルPC : windows10
 - Vagrant : 2.4.1
 - VirtualBox : 7.0.20
-- kind : 0.27.0        ※kubernetes: 1.32.2
+- kind : 0.24.0        ※kubernetes: 1.31
 - Rocky Linux : 8.x    ※cpu : 2, memory : 4GB
 
 ## 手順
@@ -76,3 +76,18 @@ vagrantコマンドを用いて、ツールを実行する。
     <td>4096</td>
   </tr>
 </table>
+
+### ansible(main.yml)
+<table border="1">
+  <tr>
+    <th>key</th>
+    <th>value</th>
+  </tr>
+  <tr>
+    <td>kind_version</td>
+    <td>0.24.0</td>
+  </tr>
+  <tr>
+    <td>kubectl_version</td>
+    <td>1.31</td>
+  </tr>
