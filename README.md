@@ -17,10 +17,10 @@
 1. VirtualBoxのインストール  
 [VirtualBox 公式サイト ダウンロードページ](https://www.virtualbox.org/wiki/Downloads)にアクセスし、インストーラーをダウンロードする。その後、インストールを行う。
 
-2. Vagrantのインストール
+2. Vagrantのインストール  
 [Vagrant 公式サイト ダウンロードページ](https://developer.hashicorp.com/vagrant/install?product_intent=vagrant)にアクセスし、インストーラーをダウンロードする。その後、インストールを行う。
 
-3. Gitのインストール
+3. Gitのインストール  
 [Git 公式サイト ダウンロードページ](https://gitforwindows.org/)にアクセスし、インストーラーをダウンロードする。その後、インストールを行う。
 
 ### 2. 資材のclone
@@ -41,7 +41,7 @@ vagrantコマンドを用いて、ツールを実行する。
 ```
 
 ## デモ
-![demo](https://github.com/user-attachments/assets/de85ee3d-226d-4b1d-8f60-88efb78c9aa4)
+
 
 ## 初期パラメータ
 
