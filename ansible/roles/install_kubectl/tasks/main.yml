@@ -1,0 +1,30 @@
+- name: add kubernetes repository 
+  become: true
+  yum_repository:
+    name: kubernetes
+    description: kubernetes stable repo
+    baseurl: https://pkgs.k8s.io/core:/stable:/v{{ kubectl_version }}/rpm/
+    enabled: true
+    gpgcheck: true
+    gpgkey: https://pkgs.k8s.io/core:/stable:/v{{ kubectl_version }}/rpm/repodata/repomd.xml.key
+
+- name: install kubectl
+  become: true
+  dnf:
+    name: kubectl
+    state: present
+
+- name: install bash-completion
+  become: true
+  dnf:
+    name: bash-completion
+    state: present
+
+- name: tab completion(kubectl)
+  lineinfile:
+    path: ~/.bashrc
+    line: "{{ item }}"
+  with_items:
+    - source <(kubectl completion bash)
+    - alias k=kubectl
+    - complete -o default -F __start_kubectl k

@@ -1,0 +1,30 @@
+- name: install yum-utils
+  become: true
+  dnf:
+    name: yum-utils
+    state: present
+
+- name: add docker-ce repository
+  become: true
+  shell:
+    cmd: dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: install docker
+  become: true
+  dnf:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+    state: present
+
+- name: start docker
+  become: true
+  systemd_service:
+    name: docker.service
+    state: started
+    enabled: true
+
+

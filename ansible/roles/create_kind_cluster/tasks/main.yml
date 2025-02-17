@@ -1,0 +1,21 @@
+- name: permission change /var/run/docker.sock
+  become: true
+  file:
+    path: /var/run/docker.sock
+    mode: 0666
+
+- name: create kind cluster
+  shell: /usr/local/bin/kind create cluster
+
+- name: change context
+  shell: kubectl config use-context kind-kind
+
+- name: get cluster
+  shell: kind get clusters
+  register: return_from_shell
+
+- name: view shell command
+  debug:
+    msg: "{{ return_from_shell.stdout }}"
+
+

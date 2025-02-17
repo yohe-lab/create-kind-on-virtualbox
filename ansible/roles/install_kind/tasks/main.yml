@@ -1,0 +1,13 @@
+- name: kind download
+  get_url:
+    url: https://kind.sigs.k8s.io/dl/v{{ kind_version }}/kind-linux-amd64
+    dest: "{{ ansible_env.HOME }}/kind"
+
+- name: deployment kind
+  become: true
+  copy:
+    src: "{{ ansible_env.HOME }}/kind"
+    dest: /usr/local/bin/kind
+    mode: '755'
+
+

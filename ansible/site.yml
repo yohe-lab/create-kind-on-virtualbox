@@ -1,0 +1,29 @@
+- hosts: clients
+  gather_facts: true
+  vars_files: vars/main.yml
+  tasks:
+    - name: install docker
+      import_role:
+        name: install_docker
+
+    - name: add user to group
+      import_role:
+        name: add_user_to_group
+
+    - name: install kind
+      import_role:
+        name: install_kind
+
+    - name: install kubectl
+      import_role:
+        name: install_kubectl
+
+    - name: create kind cluster
+      vars:
+        ansible_command_timeout: 300
+      import_role:
+        name: create_kind_cluster
+
+
+
+

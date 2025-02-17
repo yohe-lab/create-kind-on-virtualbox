@@ -1,0 +1,35 @@
+- name: modified yum repositories(mirrorlistコメントアウト)
+  become: true
+  lineinfile:
+    dest: '{{ item.dir }}'
+    regexp: '#baseurl=http://mirror.centos.org'
+    line: 'baseurl=http://vault.centos.org'
+  with_item:
+    - dir: /etc/yum.repos.d/CentOS-Linux-AppStream.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-BaseOS.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-ContinuousRelease.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Devel.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Extras.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-FastTrack.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-HighAvailability.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Plus.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-PowerTools.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Sources.repo
+
+- name: modified yum repositories(baseurl修正)
+  become: true
+  lineinfile:
+    dest: '{{ item.dir }}'
+    regexp: '#baseurl=http://mirror.centos.org'
+    line: 'baseurl=http://vault.centos.org'
+  with_item:
+    - dir: /etc/yum.repos.d/CentOS-Linux-AppStream.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-BaseOS.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-ContinuousRelease.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Devel.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Extras.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-FastTrack.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-HighAvailability.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Plus.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-PowerTools.repo
+    - dir: /etc/yum.repos.d/CentOS-Linux-Sources.repo
