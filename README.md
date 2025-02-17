@@ -40,9 +40,6 @@ vagrantコマンドを用いて、ツールを実行する。
 > vagrant up
 ```
 
-## デモ
-
-
 ## 初期パラメータ
 
 ### vagrantfile  
