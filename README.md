@@ -37,7 +37,7 @@
 vagrantコマンドを用いて、ツールを実行する。
 ```
 > cd create-kind-on-virtualbox
-> vanrant up
+> vagrant up
 ```
 
 ## デモ
