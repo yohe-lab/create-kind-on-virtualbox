@@ -39,6 +39,10 @@ vagrantコマンドを用いて、ツールを実行する。
 > cd create-kind-on-virtualbox
 > vagrant up
 ```
+## デモ
+![output(compress-video-online com) (3)](https://github.com/user-attachments/assets/013fa281-5395-416a-857e-bed311131afe)
+
+
 
 ## 初期パラメータ
 
