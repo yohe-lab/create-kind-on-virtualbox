@@ -41,9 +41,7 @@ vagrantコマンドを用いて、ツールを実行する。
 ```
 
 ## デモ
-
-
-
+![demo](https://github.com/user-attachments/assets/de85ee3d-226d-4b1d-8f60-88efb78c9aa4)
 
 ## 初期パラメータ
 
